@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoyerReels — Pricing</title>
+
+<!--
+  ============================================================
+  PRICING SHEET — edit before sending.
+  • All prices are PLACEHOLDERS. Search "$" and set your own.
+  • Send it two ways: host it next to your portfolio for a link,
+    or open it and "Print → Save as PDF" to attach in email.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#041e3d; --ink-2:#0a2a4d; --panel:#0d3054;
+    --line:rgba(210,224,242,0.14);
+    --sand:#e9e2d2; --sand-dim:#97a4b8;
+    --gold:#ffae35; --pool:#5f97d6; --white:#f6f4ee;
+    --maxw:960px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(120% 80% at 85% -10%, rgba(255,174,53,0.10), transparent 60%),
+      var(--ink);
+    color:var(--sand);
+    font-family:"Instrument Sans",system-ui,sans-serif;
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  ::selection{background:var(--gold);color:var(--ink);}
+
+  header{padding:40px 0 10px;display:flex;align-items:center;gap:10px;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:20px;display:flex;align-items:center;gap:10px;}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(255,174,53,0.18);}
+
+  .head{padding:26px 0 8px;border-top:1px solid var(--line);margin-top:14px;}
+  .kicker{font-family:"Fraunces",serif;font-style:italic;color:var(--gold);font-size:18px;margin:0 0 6px;}
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(30px,6vw,46px);color:var(--white);margin:0 0 10px;letter-spacing:-0.4px;}
+  .sub{color:var(--sand-dim);max-width:56ch;margin:0;}
+
+  .tiers{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:34px 0 10px;}
+  @media(max-width:760px){ .tiers{grid-template-columns:1fr;} }
+  .tier{
+    border:1px solid var(--line);border-radius:8px;padding:26px 22px;
+    background:linear-gradient(180deg, rgba(13,48,84,0.55), rgba(4,30,61,0.15));
+    display:flex;flex-direction:column;
+  }
+  .tier.feature{border-color:rgba(255,174,53,0.55);position:relative;}
+  .tier.feature::after{
+    content:"Most popular";position:absolute;top:-11px;left:22px;
+    background:var(--gold);color:#1a1205;font-size:12px;font-weight:600;
+    padding:3px 10px;border-radius:2px;
+  }
+  .tier h2{font-family:"Fraunces",serif;font-weight:600;font-size:22px;color:var(--white);margin:0 0 4px;}
+  .tier .who{color:var(--sand-dim);font-size:14px;margin:0 0 16px;min-height:2.6em;}
+  .price{font-family:"Fraunces",serif;font-size:38px;color:var(--gold);line-height:1;}
+  .price small{display:block;font-family:"Instrument Sans",sans-serif;font-size:13px;color:var(--sand-dim);margin-top:6px;font-weight:500;}
+  .tier ul{list-style:none;padding:0;margin:20px 0 0;}
+  .tier li{padding:8px 0 8px 24px;position:relative;font-size:15px;border-top:1px solid var(--line);}
+  .tier li:first-child{border-top:0;}
+  .tier li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);}
+
+  .addons{margin:36px 0 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+  .addons h3{margin:0;padding:16px 22px;background:rgba(13,48,84,0.5);font-family:"Fraunces",serif;font-weight:600;color:var(--white);font-size:19px;}
+  .addons .row{display:flex;justify-content:space-between;gap:16px;padding:13px 22px;border-top:1px solid var(--line);font-size:15px;}
+  .addons .row span:last-child{color:var(--gold);font-weight:600;white-space:nowrap;}
+  .addons .row .desc{color:var(--sand-dim);}
+
+  .terms{margin:32px 0 10px;color:var(--sand-dim);font-size:14px;line-height:1.7;}
+  .terms b{color:var(--sand);font-weight:600;}
+
+  footer{padding:28px 0 46px;color:var(--sand-dim);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);margin-top:24px;}
+  a{color:var(--gold);text-decoration:none;}
+
+  @media print{
+    body{background:#fff;color:#0d3054;}
+    .brand,.brand .dot{color:#041e3d;}
+    h1,.tier h2,.addons h3{color:#041e3d;}
+    .tier{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    .price,.tier li::before,.addons .row span:last-child,.kicker,a{color:#c8850f;}
+    .tier.feature::after{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    @page{margin:14mm;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><a href="index.html" style="text-decoration:none;color:inherit"><div class="brand"><span class="dot"></span>FoyerReels</div></a></header>
+
+  <div class="head">
+    <p class="kicker">Pricing</p>
+    <h1>Reels that pay for themselves.</h1>
+    <p class="sub">Cinematic promo reels built from your real listing photos. Every project starts with a free sample — you only pay once you love it.</p>
+  </div>
+
+  <!-- ============ TIERS — edit prices & bullets ============ -->
+  <div class="tiers">
+    <div class="tier">
+      <h2>First Look</h2>
+      <p class="who">For a host who wants one standout clip.</p>
+      <div class="price">$89<small>per finished reel</small></div>
+      <ul>
+        <li>One cinematic reel (15–30 sec)</li>
+        <li>Built from your photos</li>
+        <li>Music + text overlays</li>
+        <li>Sized for Instagram &amp; listings</li>
+        <li>One round of revisions</li>
+      </ul>
+    </div>
+
+    <div class="tier feature">
+      <h2>Feature</h2>
+      <p class="who">For agents &amp; hosts marketing a property in full.</p>
+      <div class="price">$179<small>per property</small></div>
+      <ul>
+        <li>One hero reel + 2 short cutdowns</li>
+        <li>Vertical + square formats</li>
+        <li>Music + branded text overlays</li>
+        <li>Priority turnaround</li>
+        <li>Two rounds of revisions</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h2>Open House</h2>
+      <p class="who">For property managers with a portfolio.</p>
+      <div class="price">$399<small>per month</small></div>
+      <ul>
+        <li>Up to 4 reels / month</li>
+        <li>Consistent look across units</li>
+        <li>Scheduled monthly delivery</li>
+        <li>Priority turnaround</li>
+        <li>Volume rate per reel</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h2>Foyer Club</h2>
+      <p class="who">For busy portfolios that need more each month.</p>
+      <div class="price">$499<small>per month</small></div>
+      <ul>
+        <li>Up to 6 reels / month</li>
+        <li>Best per-reel value</li>
+        <li>Consistent look across units</li>
+        <li>Scheduled monthly delivery</li>
+        <li>Priority turnaround</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ ADD-ONS ============ -->
+  <div class="addons">
+    <h3>Add-ons</h3>
+    <div class="row"><span class="desc">Rush delivery (48 hours)</span><span>+$75</span></div>
+    <div class="row"><span class="desc">Extra revision round</span><span>+$40</span></div>
+    <div class="row"><span class="desc">Voiceover narration</span><span>+$60</span></div>
+    <div class="row"><span class="desc">Additional cutdown / format</span><span>+$50</span></div>
+  </div>
+
+  <p class="terms">
+    <b>How it works:</b> Send your listing photos → get a free sample → approve and pay → receive your finished files.<br>
+    <b>Turnaround:</b> 3–5 business days standard, faster with rush.<br>
+    <b>Payment:</b> 50% to start on packages and retainers, balance on delivery. Single reels paid on approval.<br>
+    <b>Note:</b> Reels are stylized promotional edits built from your real photos — made to show your property at its best, not to alter or misrepresent it.
+  </p>
+
+  <footer>
+    <span>© FoyerReels</span>
+    <span><a href="mailto:hello@foyerreels.com">hello@foyerreels.com</a> · <a href="https://instagram.com/foyerreels">@foyerreels</a></span>
+  </footer>
+</div>
+</body>
+</html>
